@@ -2,3 +2,5 @@ pandas
 keras
 matplotlib
 numpy
+scikit-learn
+tensorflow

@@ -35,8 +35,14 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 # Create a sequential model
 model = Sequential()
 
-# Add a dense layer with 32 neurons and 'relu' activation function
-model.add(Dense(32, activation='relu', input_dim=X_train.shape[1]))
+# Add a dense layer with 64 neurons and 'relu' activation function
+model.add(Dense(64, activation='relu', input_dim=X_train.shape[1]))
+
+# Add another dense layer with 32 neurons and 'relu' activation function
+model.add(Dense(32, activation='relu'))
+
+# Add another dense layer with 16 neurons and 'relu' activation function
+model.add(Dense(16, activation='relu'))
 
 # Add the output layer with 1 neuron (since it's a regression problem)
 model.add(Dense(1))
